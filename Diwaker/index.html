@@ -8,16 +8,10 @@
 
 <!--
   ─────────────────────────────────────────────────────────
-  REPO SETUP (GitHub Pages)
-  Rename this file to: index.html
-  Put these 6 photos in the SAME folder / repo root:
-    pic-1.jpg  → maroon henley full shot        (gallery)
-    pic-2.jpg  → dark mirror, phone in hand     (ALBUM VOL.01 cover)
-    pic-3.jpg  → tank top, head down            (ALBUM VOL.02 cover)
-    pic-4.jpg  → straw hat, smiling             (hero polaroid + avatar + gallery)
-    pic-5.jpg  → minecraft build                (gallery)
-    pic-6.jpg  → marble mirror shot             (gallery)
-  Open in any browser. Type  gg  anywhere for a secret.
+  IMAGE FILES ARE NOW FLEXIBLE.
+  Name them pic-1 ... pic-6 with ANY extension / casing:
+  pic-1.jpg, pic-1.png, PIC-1.JPG, Pic-1.jpeg — all fine.
+  The page auto-detects the right one. No renaming needed.
   ─────────────────────────────────────────────────────────
 -->
 
@@ -193,11 +187,11 @@ section{padding:130px clamp(20px,6vw,84px);position:relative}
 .corner.bl{bottom:-1px;left:-1px;border-bottom-width:2px;border-left-width:2px}
 .corner.br{bottom:-1px;right:-1px;border-bottom-width:2px;border-right-width:2px}
 .sc-top{display:flex;gap:20px;align-items:center;padding-bottom:22px;border-bottom:1px dashed var(--line);margin-bottom:8px}
-.avatar{width:72px;height:72px;flex:none;border:1px solid var(--line);position:relative;background:var(--bg)}
+.avatar{width:72px;height:72px;flex:none;border:1px solid var(--line);position:relative;background:var(--bg);overflow:hidden}
 .avatar img{width:100%;height:100%;object-fit:cover;filter:grayscale(.85) contrast(1.1);transition:filter .5s}
 .stat-card:hover .avatar img{filter:none}
 .avatar::after{content:"P1";position:absolute;bottom:-1px;right:-1px;background:var(--amber);color:var(--bg);
-  font-family:var(--mono);font-size:8px;font-weight:700;padding:2px 5px;letter-spacing:.1em}
+  font-family:var(--mono);font-size:8px;font-weight:700;padding:2px 5px;letter-spacing:.1em;z-index:2}
 .sc-id h3{font-family:var(--disp);font-size:1.7rem;letter-spacing:.03em;text-transform:uppercase}
 .sc-id p{font-family:var(--mono);font-size:10px;color:var(--dim);letter-spacing:.18em;margin-top:6px;text-transform:uppercase}
 .sc-id p b{color:var(--teal);font-weight:500}
@@ -513,7 +507,7 @@ footer{padding:120px clamp(20px,6vw,84px) 90px;border-top:1px solid var(--line);
 
   <figure class="polaroid-wrap" data-para="0.04">
     <div class="polaroid">
-      <img src="pic-4.jpg" alt="the birthday boy, smiling with a straw hat" loading="eager" onerror="this.remove()">
+      <img src="pic-4.jpg" alt="the birthday boy" loading="eager">
       <figcaption>the fit check, vol.7</figcaption>
     </div>
   </figure>
@@ -539,7 +533,7 @@ footer{padding:120px clamp(20px,6vw,84px) 90px;border-top:1px solid var(--line);
     <div class="stat-card tilt" data-reveal id="statCard">
       <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
       <div class="sc-top">
-        <div class="avatar"><img src="pic-4.jpg" alt="" onerror="this.remove()"></div>
+        <div class="avatar"><img src="pic-4.jpg" alt=""></div>
         <div class="sc-id">
           <h3>THE BIRTHDAY BOY</h3>
           <p>LV.99 <b>CHILL SAMURAI</b> — EDITOR MAIN</p>
@@ -730,7 +724,7 @@ footer{padding:120px clamp(20px,6vw,84px) 90px;border-top:1px solid var(--line);
       <div class="vinyl-card hov" data-title="Mirror Sessions, Vol. 1">
         <div class="disc"><div class="disc-face"><div class="disc-label">HIM RECORDS<span class="disc-hole"></span></div></div></div>
         <div class="sleeve">
-          <img src="pic-2.jpg" alt="album cover — mirror sessions vol 1" loading="lazy" onerror="this.remove()">
+          <img src="pic-2.jpg" alt="album cover — mirror sessions vol 1" loading="lazy">
           <span class="sl-top"><span>HIM RECORDS</span><span>33⅓ RPM</span></span>
           <span class="sl-bot">MIRROR SESSIONS<small>VOL. 01 — LIVE, NO EFFECTS</small></span>
         </div>
@@ -738,7 +732,7 @@ footer{padding:120px clamp(20px,6vw,84px) 90px;border-top:1px solid var(--line);
       <div class="vinyl-card hov" data-title="Live From The Hallway">
         <div class="disc"><div class="disc-face"><div class="disc-label">HIM RECORDS<span class="disc-hole"></span></div></div></div>
         <div class="sleeve">
-          <img src="pic-3.jpg" alt="album cover — live from the hallway" loading="lazy" onerror="this.remove()">
+          <img src="pic-3.jpg" alt="album cover — live from the hallway" loading="lazy">
           <span class="sl-top"><span>HIM RECORDS</span><span>45 RPM</span></span>
           <span class="sl-bot">LIVE FROM THE HALLWAY<small>VOL. 02 — ENCORE EDITION</small></span>
         </div>
@@ -768,22 +762,22 @@ footer{padding:120px clamp(20px,6vw,84px) 90px;border-top:1px solid var(--line);
   <div class="sheet">
     <figure class="frame hov" data-reveal style="--d:0s">
       <span class="fnum">FR_01</span><span class="ftag">EDITED</span>
-      <div class="media"><span class="slot-label">DROP PIC HERE<br>(pic-1.jpg)</span><img src="pic-1.jpg" alt="the maroon henley fit" loading="lazy" onerror="this.remove()"></div>
+      <div class="media"><span class="slot-label">DROP PIC HERE<br>(pic-1)</span><img src="pic-1.jpg" alt="the maroon henley fit" loading="lazy"></div>
       <figcaption class="fcap"><b>THE MAROON ERA</b><span>f/1.8</span></figcaption>
     </figure>
     <figure class="frame hov" data-reveal style="--d:.07s">
       <span class="fnum">FR_02</span><span class="ftag">RAW</span>
-      <div class="media"><span class="slot-label">DROP PIC HERE<br>(pic-4.jpg)</span><img src="pic-4.jpg" alt="smiling with the straw hat" loading="lazy" onerror="this.remove()"></div>
+      <div class="media"><span class="slot-label">DROP PIC HERE<br>(pic-4)</span><img src="pic-4.jpg" alt="smiling with the straw hat" loading="lazy"></div>
       <figcaption class="fcap"><b>MAIN CHARACTER ENERGY</b><span>f/1.8</span></figcaption>
     </figure>
     <figure class="frame wide hov" data-reveal style="--d:.14s">
       <span class="fnum">FR_03</span><span class="ftag">CREATIVE</span>
-      <div class="media"><span class="slot-label">DROP PIC HERE<br>(pic-5.jpg)</span><img src="pic-5.jpg" alt="minecraft build" loading="lazy" onerror="this.remove()"></div>
+      <div class="media"><span class="slot-label">DROP PIC HERE<br>(pic-5)</span><img src="pic-5.jpg" alt="minecraft build" loading="lazy"></div>
       <figcaption class="fcap"><b>THE BUILDER ARC</b><span>60 FPS</span></figcaption>
     </figure>
     <figure class="frame hov" data-reveal style="--d:.21s">
       <span class="fnum">FR_04</span><span class="ftag">CINEMA</span>
-      <div class="media"><span class="slot-label">DROP PIC HERE<br>(pic-6.jpg)</span><img src="pic-6.jpg" alt="mirror shot" loading="lazy" onerror="this.remove()"></div>
+      <div class="media"><span class="slot-label">DROP PIC HERE<br>(pic-6)</span><img src="pic-6.jpg" alt="mirror shot" loading="lazy"></div>
       <figcaption class="fcap"><b>CINEMATIC MODE: ON</b><span>2.39:1</span></figcaption>
     </figure>
   </div>
@@ -839,6 +833,43 @@ const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const FINE = matchMedia('(hover:hover) and (pointer:fine)').matches;
 const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
+
+/* ── SELF-HEALING IMAGES ──────────────────────
+   If "pic-4.jpg" 404s, automatically tries:
+   pic-4.png / pic-4.jpeg / Pic-4.jpg / PIC-4.JPG /
+   pic-4.webp ... every case + extension combo.   */
+const EXT_BANK = ['jpg','jpeg','JPG','JPEG','png','PNG','webp','WEBP','jfif'];
+function candidates(path){
+  const clean = (path || '').split('?')[0];
+  const m = clean.match(/^(.*\/)?([^\/]+?)\.([a-zA-Z0-9]+)$/);
+  if (!m) return [];
+  const dir = m[1] || '', name = m[2];
+  const bases = [...new Set([
+    name,
+    name.toUpperCase(),
+    name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()
+  ])];
+  const list = [];
+  for (const b of bases) for (const e of EXT_BANK){
+    const p = dir + b + '.' + e;
+    if (p !== clean && !list.includes(p)) list.push(p);
+  }
+  return list;
+}
+function healImages(){
+  $$('img').forEach(img=>{
+    const chain = candidates(img.getAttribute('src'));
+    if (!chain.length) return;
+    let i = 0;
+    const tryNext = () => {
+      if (i >= chain.length){ img.remove(); return; }
+      img.src = chain[i++];
+    };
+    img.addEventListener('error', tryNext);
+    if (img.complete && img.naturalWidth === 0) tryNext();
+  });
+}
+healImages();
 
 /* ── toasts ─────────────────────────────────── */
 const toasts = $('#toasts');
@@ -974,7 +1005,7 @@ reel.addEventListener('click', e=>{ if (moved > 8){ e.preventDefault(); e.stopPr
 /* ── studio: vinyl + setlist ────────────────── */
  $$('.vinyl-card').forEach(v=>{
   v.addEventListener('click', ()=>{
-    if (!FINE) v.classList.toggle('out'); // tap works on touch
+    if (!FINE) v.classList.toggle('out');
     toast('NOW SPINNING ♪', v.dataset.title + ' — playing in his head only');
   });
 });
