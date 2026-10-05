@@ -1093,6 +1093,23 @@ addEventListener('keydown', e=>{
     if (!RM) burst(innerWidth*.5, innerHeight*.4, 60, 14);
     buf='';
   }
+/* ── "gg" easter egg: keyboard + mobile taps ── */
+let buf = '', taps = 0, tapTimer = null;
+function ggWin(){
+  toast('GG WP','hidden achievement found. +10 aura.');
+  if (!RM) burst(innerWidth*.5, innerHeight*.4, 60, 14);
+}
+addEventListener('keydown', e=>{
+  if (e.key.length !== 1) return;
+  buf = (buf + e.key.toLowerCase()).slice(-4);
+  if (buf.endsWith('gg')){ ggWin(); buf=''; }
+});
+const ggEl = document.querySelector('.gg');
+if (ggEl) ggEl.addEventListener('click', ()=>{
+  taps++;
+  clearTimeout(tapTimer);
+  tapTimer = setTimeout(()=> taps = 0, 1200);
+  if (taps >= 3){ ggWin(); taps = 0; }
 });
 })();
 </script>
